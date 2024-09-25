@@ -2,7 +2,7 @@ function unlockChapter(chapter) {
     const passwords = {
         Article: "alice",
         kasaysayan: "filipino",
-        chapter3: "page3",
+        poem: "laro",
         chapter4: "page4"
     };
 

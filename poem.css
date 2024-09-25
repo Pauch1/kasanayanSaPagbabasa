@@ -1,0 +1,77 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #e8d8b7;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d2b48c' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+.book {
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    max-width: 800px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.book::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, #f0e6d2, transparent);
+}
+h1 {
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+h2 {
+    text-align: center;
+    color: #6a6a6a;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 40px;
+}
+.poem {
+    white-space: pre-wrap;
+    line-height: 1.8;
+    color: #333;
+    font-size: 1.1em;
+    position: relative;
+    z-index: 1;
+}
+.poem::first-letter {
+    font-size: 3em;
+    float: left;
+    line-height: 1;
+    padding-right: 8px;
+    color: #8B4513;
+}
+.page-number {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    font-style: italic;
+    color: #8B4513;
+}
+@media (max-width: 600px) {
+    .book {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .poem {
+        font-size: 1em;
+    }
+}
